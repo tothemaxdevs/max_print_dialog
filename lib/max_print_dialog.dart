@@ -108,18 +108,18 @@ class _PrintDialogState extends State<PrintDialog> {
       child: ListView(
         shrinkWrap: true,
         children: [
-          const Text(
-            'Transaksi berhasil',
+          Text(
+            widget.title!,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
           ),
-          const Text(
-            'Silahkan pilih perangkat dan cetak struk, klik tutup apabila tida ingin cetak struk.',
+          Text(
+            widget.description!,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w400,
               color: Color(0xFF6B7588),
@@ -208,8 +208,8 @@ class _PrintDialogState extends State<PrintDialog> {
                                   icon: Image.asset(
                                     device.deviceName ==
                                             selectedPrinter?.deviceName
-                                        ? 'assets/ic_connect_off.png'
-                                        : 'assets/ic_connect_on.png',
+                                        ? 'assets/ic_connect_on.png'
+                                        : 'assets/ic_connect_off.png',
                                     package: 'max_print_dialog',
                                   )),
                             )),
