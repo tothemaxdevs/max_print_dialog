@@ -320,6 +320,7 @@ class _PrintDialogState extends State<PrintDialog> {
 
   _printReceiveTest() {
     _printEscPos(widget.bytes, widget.generator);
+    widget.onSuccess!();
   }
 
   /// print ticket
